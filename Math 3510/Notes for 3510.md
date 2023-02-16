@@ -96,3 +96,4 @@ We then define two possible sums on a partition $\mathcal{P}$, the upper and low
 Finally, we define integrability. $f$ is integrable on $R$ if for all partitions $\mathcal{P}$ of $R$ there is a *unique* number $I$ satisfying $L(f, \mathcal{P})\leq I \leq U(f, \mathcal{P})$. If$f$ is integrable we say $\displaystyle \int_R fdV:= I$.
 
 ### Properties of Integrals
+
