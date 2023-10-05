@@ -1,6 +1,61 @@
-`This is a big reference sheet for me to look back to while I'm taking this class. Meant to go over the major points and key ideas of the course, as well as some fun results.`
- $\newcommand{\norm}[1]{\|#1\|}\newcommand{\opnorm}[1]{\|#1\|_{\scriptscriptstyle\text{op}}}\newcommand{\cont}{{\mathscr{C}^1}}\newcommand{\zerov}{\boldsymbol{\vec{0}}}\newcommand{\bs}[1]{\boldsymbol{#1}}\newcommand{\Alt}{\Lambda^k(\R^n)^*}\newcommand{\dx}{\operatorname{d}\!\boldsymbol{x}}\newcommand{\R}{\mathbb{R}}\newcommand{\mat}[2]{\mathcal{M}_{#1 \times #2}}\newcommand{\matmn}{\mathcal{M}_{m \times n}}\newcommand{\matnn}{\mathcal{M}_{n \times n}}\newcommand{\orth}{\text{O}(n)}\newcommand{\sym}{\text{Sym}(n)}\newcommand{\rank}{\text{rank}}\newcommand{\image}[1]{{\text{im}}\{#1\}}\DeclareMathOperator{\sign}{sign}\DeclareMathOperator{\alt}{alt}\renewcommand{d}{\mathop{}\!\mathrm{d}}$
- 
+`This is a big reference sheet/summary for me to look back to while I'm taking this class. Meant to go over the major points and key ideas of the course, and some fun stuff :)
+ $\newcommand{\norm}[1]{\|#1\|}\newcommand{\opnorm}[1]{\|#1\|_{\scriptscriptstyle\text{op}}}\newcommand{\cont}{{\mathscr{C}^1}}\newcommand{\zerov}{\boldsymbol{\vec{0}}}\newcommand{\bs}[1]{\boldsymbol{#1}}\newcommand{\Alt}{\Lambda^k(\R^n)^*}\newcommand{\dx}{\operatorname{d}\!\boldsymbol{x}}\newcommand{\R}{\mathbb{R}}\newcommand{\mat}[2]{\mathcal{M}_{#1 \times #2}}\newcommand{\matmn}{\mathcal{M}_{m \times n}}\newcommand{\matnn}{\mathcal{M}_{n \times n}}\newcommand{\orth}{\text{O}(n)}\newcommand{\sym}{\text{Sym}(n)}\newcommand{\rank}{\text{rank}}\newcommand{\image}[1]{{\text{im}}\{#1\}}\DeclareMathOperator{\sign}{sign}\DeclareMathOperator{\alt}{alt}\renewcommand{d}{\mathop{}\!\mathrm{d}}\newcommand{\del}{\partial}$
+# Chapter 1: Vectors and Matrices
+## 1.1 Vectors in $\R^n$
+// TODO
+## 1.2 Dot Product
+// TODO
+## 1.3 Subspaces of $\R^n$
+// TODO
+## 1.4 Linear Transformations and Matrix Algebra
+// TODO
+## 1.5 Introduction to Determinants and the Cross Product
+// TODO
+# Chapter 2: Functions, Limits, and Continuity
+## 2.1 Scalar- and Vector-Valued Functions
+// TODO
+## 2.2 A Bit of Topology in $\R^n$
+// TODO
+## 2.3 Limits and Continuity
+// TODO
+
+# Chapter 3: The Derivative
+## 3.1 Partial Derivatives and Directional Derivatives
+// TODO
+## 3.2 Differentiability
+// TODO
+## 3.3 Differentiation Rules
+// TODO
+## 3.4 The Gradient
+// TODO
+## 3.5 Curves
+// TODO
+## 3.6 Higher-Order Partial Derivatives
+// TODO
+
+# Chapter 4: Implicit and Explicit Solutions of Linear Systems
+
+## 4.1 Gaussian Elimination and the Theory of Linear Systems
+// TODO
+## 4.2 Elementary Matrices and Calculating Inverse Matrices
+// TODO
+## 4.3 Linear Independence, Basis, and Dimension
+// TODO
+## 4.4 The Four Fundamental Subspaces
+// TODO
+## 4.5 The Nonlinear Case: Introduction to Manifolds
+// TODO
+# Chapter 5: Extremum Problems
+## 5.1 Compactness and the Maximum Value Theorem
+// TODO
+## 5.2 Maximum/Minimum Problems
+// TODO
+## 5.3 Quadratic Forms and the Second Derivative Test
+// TODO
+## 5.4 Lagrange Multipliers
+// TODO
+## 5.5 Projections, Least Squares, and Inner Product Spaces
+// TODO
 # Chapter 6: Solving Nonlinear Problems
 
 ## 6.1 The Contraction Mapping Principle
@@ -193,7 +248,6 @@ $\mathcal{D}(\boldsymbol{e}_1, ..., \boldsymbol{e}_n) = 1$
 This function is the determinant. For an $n\times n$ matrix $A$, $\det A = \mathcal{D}(\boldsymbol{a}_1, \cdots, \boldsymbol{a}_n)$
 
 ### Properties
-
 1. If two columns of a matrix are equal, $\det A = 0$
 2. Performing row or column operations on a matrix changes the determinant nicely
 	1. Swapping two rows or columns leaves $\det A' = - \det A$
@@ -217,22 +271,21 @@ The $i^{\text{th}}$ coordinate of $\boldsymbol{x}$ which solves $A\boldsymbol{x}
 **Inverse matrix "formula"**:
 $A^{-1} = \cfrac{1}{\det A}C^\intercal$
 
-**Permuations**: 
-A permuation $\sigma \in S_n$ is a bijective mapping $\sigma: \{1, \cdots,n\} \to \{1, \cdots,n\}$ 
+**Permutations**: 
+A permutation $\sigma \in S_n$ is a bijective mapping $\sigma: \{1, \cdots,n\} \to \{1, \cdots,n\}$ 
 Set of all permutations is denoted $S_n$
 The sign of a permutation $\text{sign}(\sigma) = \begin{cases}+1&\text{odd \# of exchanges}\\-1&\text{even \# of exchanges}\end{cases}$ 
 
 where $\text{\# of exchanges}$ is the number of swaps required to change the ordered list $(1, \cdots, n)$ to $(\sigma(1), \cdots, \sigma(n))$
 
 ### Formulas for the Determinant
-
 **Expansion by cofactors:**
 For any fixed row $i$
 $\det A =\sum\limits_{j=1}^n a_{i,j}c_{i,j}$
 For any fixed column $j$
 $\det A =\sum\limits_{i=1}^n a_{i,j}c_{i,j}$
 
-**Sum of row/column permuations:**
+**Sum of row/column permutations:**
 $\det A = \sum\limits_{\sigma \in S_n}\text{sign}(\sigma)a_{\sigma(1), 1}a_{\sigma(2), 2}\cdots a_{\sigma(n), n}$
 $\det A = \sum\limits_{\sigma \in S_n}\text{sign}(\sigma)a_{1, \sigma(1)}a_{2, \sigma(2)}\cdots a_{n, \sigma(n)}$
 
@@ -244,7 +297,7 @@ if $f:\boldsymbol{g}(\Omega) \to \mathbb{R}$ and $(f \circ \boldsymbol{g})|\det 
 
 
 
-# Chapter 8: Differential Forms and Integration on Manifold
+# Chapter 8: Differential Forms and Integration on Manifolds
 
 ## 8.2 Differential Forms
 
@@ -253,16 +306,16 @@ The basis  1-forms $\{\d x_1, ..., \d x_n\}$ are defined by $\d x_i(\bs{v})=v_i$
 
 The set of linear maps from $\R^n$ to $\R$ is an $n$ dimensional vector space $(\R^n)^*$ spanned by the basis 1-forms $\{\d x_1, ..., \d x_n\}$. This space is the *dual space* of $\R^n$.
 
-Let $I = (i_1, ..., i_k)$ be a multi-index. Using this, we want to define an alternating, multilinear function $\dx_I : \underbrace{\R^n \times \cdots \times \R^n}_{k \text{ times}} \to \R$$ that takes $k$ vectors in $\R^n$ to $\R$ by $\dx_I(\bs{v}_1, ..., \bs{v}_k) =\det V_I$, where $V_I$ is formed by taking the $i_1, ..., i_k$th rows of the matrix $\begin{bmatrix}\uparrow&&\uparrow\\\bs{v_1}&\cdots&\bs{v}_k\\\downarrow&&\downarrow\end{bmatrix}$. This calculates the volume of the parallelipiped of the vectors $\bs{v}_1, ..., \bs{v}_k$ projected onto the $x_{i_1}, ..., x_{i_k}$ plane. 
+Let $I = (i_1, ..., i_k)$ be a multi-index. Using this, we want to define an alternating, multilinear function $\dx_I : \underbrace{\R^n \times \cdots \times \R^n}_{k \text{ times}} \to \R$ that takes $k$ vectors in $\R^n$ to $\R$ by $\dx_I(\bs{v}_1, ..., \bs{v}_k) =\det V_I$, where $V_I$ is formed by taking the $i_1, ..., i_k$th rows of the matrix $\begin{bmatrix}\uparrow&&\uparrow\\\bs{v_1}&\cdots&\bs{v}_k\\\downarrow&&\downarrow\end{bmatrix}$. This calculates the volume of the parallelepiped of the vectors $\bs{v}_1, ..., \bs{v}_k$ projected onto the $x_{i_1}, ..., x_{i_k}$ plane. 
 
 The set of alternating, multilinear functions from $(\R^n)^k$ to $\R$ is denoted by $\Alt$. This is the dual space of the exterior power of $\R^n$. This space is spanned by the basis k-forms which are given by all $\dx_I$ where the $(i_1, ..., i_k)$ are increasing. The dimension of this space $\dim(\Alt) = \binom{n}{k}$. So every $T \in \Alt$ is described by $\binom{n}{k}$ coefficients $a_I$ so that $T = \displaystyle\sum\limits_{I \text{ increasing}}a_I\dx_I$. 
 
 The wedge product $\wedge: \Alt\times \Lambda^l(\R^n)^* \to \Lambda^{k+l}(\R^n)^*$ can be defined in multiple ways for two forms $\omega = \sum\limits_{I \text{ increasing}}a_I\dx_I \in \Alt$ and $\eta = \sum\limits_{J \text{ increasing}}b_J\dx_J \in \Lambda^l(\R^n)^*$.
 
-**Concatenation:**
-For the basis forms, we simply concatenate the multi-indeces so that $\dx_I \wedge \dx_J = \dx_{(I, J)} =  \dx_{(i_1, ..., i_k, j_1, ..., j_l)}$. By linearity then, we have $\omega \wedge \eta = \sum\limits_{I \text{ increasing}}\sum\limits_{J \text{ increasing}}(a_I b_J)\dx_{(I,J)}$.
+**1.) Concatenation:**
+For the basis forms, we simply concatenate the multi-indices so that $\dx_I \wedge \dx_J = \dx_{(I, J)} =  \dx_{(i_1, ..., i_k, j_1, ..., j_l)}$. By linearity then, we have $\omega \wedge \eta = \sum\limits_{I \text{ increasing}}\sum\limits_{J \text{ increasing}}(a_I b_J)\dx_{(I,J)}$.
 
-**Alternization of Tensor Product**: 
+2.) **Alternization of Tensor Product**: 
 $\omega \wedge \eta = \alt(\omega \otimes \eta)$, 
 
 where $\otimes$ is the tensor product which is defined by $(\omega\otimes\eta)(\bs{v}_1, ..., \bs{v}_{k+l})= \omega(\bs{v}_1, ..., \bs{v}_k)\cdot\eta(\bs{v}_{k+1}, ..., \bs{v}_{k+l})$ 
@@ -340,9 +393,103 @@ also note that $\bs{g}^*(\d \omega) = \d(\bs{g}^*\omega)$
 Given an $n$-form $\omega = f(\bs{x}) = \d x_1 \wedge \cdots \wedge \d x_n$ on a region $\Omega \subset \R^n$, we define $$\displaystyle\int_\Omega\omega := \displaystyle \int_\Omega f\text{ dVol}$$
 With this definition, we can nicely restate the change of variables theorem in a nice way. If $\bs{g}: \Omega \subset \R^n \to \R^n$ is smooth, injective, and has $\det(D\bs{g}) > 0$ on a region $\Omega$, then for any $\omega \in \mathcal{A}^n(\R^n)$ we have$\displaystyle\int_{\bs{g}(\Omega)}\omega = \displaystyle \int_\Omega \bs{g}^*\omega$. This motivates us to define integration on a manifold. 
 
-If $\bs{g}: \Omega \subset \R^n \to \R^n$ is smooth, injective, and has $\rank(\det D\bs{g})=k$ on a region $\Omega$, and only doesn't have this rank on a set of volume 0, then for a paramaterized k-dimensional manifold $M=\bs{g}(\Omega)\subset\R^n$ and for any $\omega \in \mathcal{A}^n(\R^n)$ we define $$\displaystyle\int_{M}\omega := \displaystyle \int_\Omega \bs{g}^*\omega$$
-
-This is well defined, and has the same result for different paramaterizations (as long as both paramaterizations orient $M$ in the same way)
+If $\bs{g}: \Omega \subset \R^n \to \R^n$ is smooth, injective, and has $\rank(\det D\bs{g})=k$ on a region $\Omega$, and only doesn't have this rank on a set of volume 0, then for a parameterized k-dimensional manifold $M=\bs{g}(\Omega)\subset\R^n$ and for any $\omega \in \mathcal{A}^n(\R^n)$ we define $$\displaystyle\int_{M}\omega := \displaystyle \int_\Omega \bs{g}^*\omega$$
+This is well defined, and has the same result for different parameterizations (as long as both parameterizations orient $M$ in the same way)
 
 ## 8.3 Line Integrals and Green's Theorem
 
+We can associate a 1-form in $\R^n$ ($\omega = \sum f_i \d x_i$) with a vector field $\bs{F}: \R^n \to \R^n$, where $\bs{F}(\bs{x}) = \begin{bmatrix}f_1(\bs{x})\\\vdots\\f_n(\bs{x})\end{bmatrix}$.  Then, if we have a curve $\mathcal{C}$, parameterized by some function $\bs{g}: [a, b] \to \mathcal{C}$, we can find out how much *work* is done on a particle traveling on the path $\mathcal{C}$ by the force field $\bs{F}$. 
+
+This work is given by the line integral $\displaystyle\int_\mathcal{C} \omega = \displaystyle\int_\mathcal{C} f_1(\bs{x})\d x_1 + ... + f_n(\bs{x})\d x_n$. 
+
+To compute this integral, we pull back via the parameterization $\bs{g}$ to get $\displaystyle\int_{\bs{g}([a, b])} \omega = \displaystyle\int_{[a, b]} \bs{g}^*(\omega) = \displaystyle\int_a^b f_1(\bs{g}(t))\; g_1'(t)\d t + ... + f_n(\bs{g}(t))\; g_n'(t)\d t = \displaystyle\int_a^b \bs{F}(\bs{g}(t))\cdot \nabla \bs{g}(t) \d t$
+
+It's common notation to let $\bs{s} = \bs{g}(t)$ so that $\displaystyle\int_a^b \bs{F}(\bs{g}(t))\cdot \nabla \bs{g}(t) \d t = \displaystyle\int_a^b \bs{F}(\bs{s})\cdot \d \bs{s}$
+
+### F.T.C for line integrals
+
+For a 1-form $\omega$, if we can find a potential 0-form $f$ so that $\omega = \d f$, then for any curve $\mathcal{C}$ with endpoints $\bs{A}, \bs{B} \in \mathcal{C}$, we have $\displaystyle\int_\mathcal{C} \omega = f(\bs{A})- f(\bs{B})$. In traditional vector notation, if we can find an $f$ so that the force field $\bs{F} = \nabla f$, then for a curve $\mathcal{C}$ parameterized by a $\bs{g}: [a, b] \to \R^n$, we have $\displaystyle\int_\mathcal{C} \bs{F}(\bs{s})\cdot \d \bs{s} = f(\bs{g}(b)) - f(\bs{g}(a))$.
+
+### Exactness
+A 1-form $\omega$ is exact if any of the following equivalent statements are true:
+*(The endpoints of a curve $\mathcal{C}$ are denoted $\bs{A}$ and $\bs{B}$)*
+
+1. $\omega = \d f$ for some 0-form $f$
+2. For every closed curve (when $\bs{A}= \bs{B}$), we have $\displaystyle\int_\mathcal{C}\omega = 0$
+3. $\displaystyle\int_\mathcal{C}\omega$ is path-independent. ( $\displaystyle\int_\mathcal{C}\omega$ =  $\displaystyle\int_\mathcal{C'}\omega$ if $\mathcal{C}$ and $\mathcal{C}'$ have the same endpoints)
+
+### Closedness
+A 1-form $\omega$ is closed if $\d\omega = 0$
+
+### Simply Connected Regions
+- exactness $\implies$ closedness 
+	- because $d^2 = 0$
+- closedness $\;\not\!\!\!\!\implies$ exactness
+	- *except on special regions called "simply connected regions"
+
+- $X \subset \R^n$ is called *simply connected* if any pair of points can be joined by a piecewise $\cont$ path (connected), and every closed curve which doesn't intersect itself (every simple curve) in $X$ can be continuously shrunk to a point in $X$. 
+	- *Intuition*: the subset has no holes
+	- Think about an open set. You can draw any closed curve and shrink it. Think about an open set with a hole. If you draw a curve around the hole, you can't shrink the curve to a point anymore
+
+- If $\omega$ is a smooth, closed 1-form on a simply connected region $\Omega \subset \R^2$, then $\omega$ is exact. 
+
+
+### Green's Theorem
+**Green's Theorem for a Rectangle**:
+For a rectangle $R \subset \R^2$, and a 1-form $\omega$ on $R$. 
+$$\displaystyle\int_{\del R}\omega = \displaystyle\int_{R}\d\omega$$(Where $\del R$ is counterclockwise)
+
+**Classical Green's Theorem**: 
+For an $\bs{F}: \R^2 \to \R^2$, where $\bs{F}(x, y) = \begin{bmatrix}F_1(x, y)\\F_2(x, y)\end{bmatrix}$. And for a region $D$ bounded by $C$. Then
+$$\displaystyle\int_C F_1(x,y)\d x + F_2(x,y)\d y = \iint_D \left( \frac{\partial F_2} {\partial x} - \frac{\partial F_1}{\partial y} \right) \d x \d y$$
+
+**Slight Generalization**: 
+- If $S \subset \R^2$ is parameterized by a rectangle, then $\displaystyle\int_{\del S}\omega = \displaystyle\int_{S}\d\omega$. 
+- Green's Theorem holds for any region $S$ that can be decomposed as a finite union of parametrized rectangles which overlap only along their boundaries.
+
+### Winding Number
+Something fun we can do is count the number of times a parameterized curve $\gamma$ "winds" around the origin. We define $\text{wind}(\gamma) = \cfrac{1}{2\pi} \displaystyle\int_\gamma\cfrac{-y}{x^2+y^2}\d x + \cfrac{x}{x^2+y^2} \d y$, and this counts the number of times a curve loops counterclockwise around the origin. 
+
+## 8.4 Surface Integrals and Flux
+
+### Parameterized Surface
+We can work with special 2-dimensional surfaces in $\R^3$, like spheres, toruses, cylinders, etc. 
+
+Suppose we have a surface $S = \bs{g}(U)$ parameterized by an injective function $\bs{g}: U \subset \R^2 \to \R^n$ (for a bounded, open $U$) that alway has $\rank(D\bs{g}(\bs{x})) = 2$. Then $S$ is a *parameterized surface*. 
+
+We define the integral of a 2-form $\omega \in \mathcal{A}^2(\R^n)$ over this parameterized surface to be $\displaystyle\int_S \omega = \displaystyle\int_U \bs{g}^*\omega$. 
+
+### Orientation
+For each tangent plane of $S$, find a positively oriented basis $(\bs{u}, \bs{v})$ (i.e. one where $\det(\bs{u}, \bs{v}) > 0$). An orientation for $S$ is a continuously varying notion of what a positively oriented basis for the plane at each point of $S$ should be.  
+
+An orientation can be determined in multiple ways. 
+
+$S$ has an orientation iff we can choose various parameterizations $\bs{g}_i$ of subsets $S_i \subset S$ such that $\bigcup\limits_i S_i = S$ and that at every point $\bs{x} \in S$ the corresponding $\bs{g}_i$ has $\det(\cfrac{\del\bs{g}_i}{\del u_1}, \cfrac{\del\bs{g}_i}{\del u_1}) > 0$ (the tangent vectors of the parameterization form a positively oriented basis). 
+
+An orientation can also be determined if we have a 2-form $\omega$ which is never 0 on $S$. This is because at each point $\bs{x} \in S$, we can pick tangent vectors $\bs{u}, \bs{v}$ so that $\omega(\bs{a})(\bs{u}, \bs{v}) > 0$, which defines a continuously varying notion of what a positively oriented basis for the plane should be. 
+
+
+### Area Forms
+For an oriented surface $S$, it's oriented area 2-form $\sigma$ assigns at each point $\bs{x} \in S$ the signed area of the parallelogram that the tangent vectors at that point span. 
+
+
+In $\R^3$ (where $\bs{x} = (x, y, z)$), the area 2-form gives the *surface area* of a surface $S$. If at each point $\bs{x} \in S$, the surface $S$ has outward pointing unit normal given by $\bs{n}(\bs{x}) = \begin{bmatrix}n_1(\bs{x})\\n_2(\bs{x})\\n_3(\bs{x})\end{bmatrix}$, then the corresponding area 2-form is $\sigma = n_1(\bs{x}) \d y \wedge \d z + n_2(\bs{x}) \d z \wedge \d x + n_3(\bs{x}) \d x \wedge \d y$. This works because $\bs{n}$ is a unit vector, so the area of the plane spanned by tangent vectors $\bs{u}$ and $\bs{v}$ is given by $\det(\begin{bmatrix}\uparrow&\uparrow&\uparrow\\\bs{n}&\bs{u}&\bs{v}\\\downarrow&\downarrow&\downarrow\end{bmatrix})$. 
+### Flux
+// TODO 
+
+## 8.5 Stoke's Theorem
+// TODO
+## 8.6 Applications to Physics
+
+## 8.7 Applications to Topology
+
+# Chapter 9: Eigenvalues, Eigenvectors, and Applications
+
+## 9.1 Linear Transformations and Change of Basis
+// TODO
+## 9.2 Eigenvalues, Eigenvectors, and Diagonalizability
+// TODO
+## 9.3 Difference Equations and Ordinary Differential Equations
+// TODO
+## 9.4 The Spectral Theorem
+// TODO
